@@ -3,183 +3,285 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+
+  <meta name="title" content="STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding">
+  <meta name="description" content="STRIDE proposes a masked diffusion-based activation model for proactive streaming video understanding, jointly predicting when-to-speak decisions over temporal windows.">
+  <meta name="keywords" content="streaming video understanding, proactive activation, masked diffusion, Video-LLM, when-to-speak, sequence denoising">
+  <meta name="author" content="Junho Kim, Hosu Lee, James M. Rehg, Minsu Kim, Yong Man Ro">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="InterLive">
+  <meta property="og:title" content="STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding">
+  <meta property="og:description" content="STRIDE proposes a masked diffusion-based activation model for proactive streaming video understanding, jointly predicting when-to-speak decisions over temporal windows.">
+  <meta property="og:url" content="https://interlive-team.github.io/STRIDE">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:published_time" content="2025-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Junho Kim">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding">
+  <meta name="twitter:description" content="STRIDE proposes a masked diffusion-based activation model for proactive streaming video understanding, jointly predicting when-to-speak decisions over temporal windows.">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
+  <meta name="citation_title" content="STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding">
+  <meta name="citation_author" content="Kim, Junho">
+  <meta name="citation_author" content="Lee, Hosu">
+  <meta name="citation_author" content="Rehg, James M.">
+  <meta name="citation_author" content="Kim, Minsu">
+  <meta name="citation_author" content="Ro, Yong Man">
+  <meta name="citation_publication_date" content="2025">
+
   <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
+
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
+
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
+  <style>
+    /* Teaser carousel custom styles */
+    .teaser-carousel-wrapper {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .teaser-carousel-wrapper video {
+      width: 100%;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-xl);
+    }
+    .teaser-carousel-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+    .teaser-carousel-nav button {
+      background: var(--text-primary);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+    .teaser-carousel-nav button:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    .teaser-dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .teaser-dots .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border-color);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      padding: 0;
+    }
+    .teaser-dots .dot.active {
+      background: var(--primary-color);
+      transform: scale(1.3);
+    }
+    .teaser-slide {
+      display: none;
+    }
+    .teaser-slide.active {
+      display: block;
+    }
+
+    /* Architecture PDF section */
+    .architecture-section {
+      background: var(--background-primary);
+    }
+    .architecture-section img,
+    .architecture-section object {
+      width: 100%;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Video grid styles */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .video-grid-item video {
+      width: 100%;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+    .video-grid-item video:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .video-grid-item {
+      text-align: center;
+    }
+    .video-grid-label {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .video-section-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      padding-left: 0.25rem;
+    }
+
+    /* Method highlights */
+    .method-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .method-card {
+      background: var(--background-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .method-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .method-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+    .method-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Counter / teaser indicator */
+    .teaser-counter {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .method-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Contribution list styling */
+    .contribution-list {
+      list-style: none;
+      padding: 0;
+    }
+    .contribution-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .contribution-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary-color);
+    }
+
+    /* Section subtitle */
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding",
+    "description": "STRIDE proposes a masked diffusion-based activation model for proactive streaming video understanding, jointly predicting when-to-speak decisions over temporal windows.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Junho Kim", "affiliation": {"@type": "Organization", "name": "UIUC"}},
+      {"@type": "Person", "name": "Hosu Lee", "affiliation": {"@type": "Organization", "name": "KAIST"}},
+      {"@type": "Person", "name": "James M. Rehg", "affiliation": {"@type": "Organization", "name": "UIUC"}},
+      {"@type": "Person", "name": "Minsu Kim", "affiliation": {"@type": "Organization", "name": "Google DeepMind"}},
+      {"@type": "Person", "name": "Yong Man Ro", "affiliation": {"@type": "Organization", "name": "KAIST"}}
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    "datePublished": "2025",
+    "url": "https://interlive-team.github.io/STRIDE",
+    "keywords": ["streaming video understanding", "proactive activation", "masked diffusion", "Video-LLM"],
+    "isAccessibleForFree": true
   }
   </script>
 </head>
 <body>
-
 
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
@@ -188,45 +290,24 @@
 
   <!-- More Works Dropdown -->
   <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works">
       <i class="fas fa-flask"></i>
       More Works
       <i class="fas fa-chevron-down dropdown-arrow"></i>
     </button>
     <div class="more-works-dropdown" id="moreWorksDropdown">
       <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
+        <h4>More Works from InterLive</h4>
         <button class="close-btn" onclick="toggleMoreWorks()">
           <i class="fas fa-times"></i>
         </button>
       </div>
       <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
+        <a href="https://arxiv.org/abs/2411.16173" class="work-item" target="_blank">
           <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+            <h5>SaLoVA</h5>
+            <p>Segment-Augmented Long Video Assistant for Targeted Retrieval and Routing in Long-Form Video Analysis.</p>
+            <span class="work-venue">arXiv 2024</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
@@ -235,261 +316,287 @@
   </div>
 
   <main id="main-content">
+
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding</h1>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                <a href="https://arkimjh.github.io" target="_blank">Junho Kim</a><sup>1*</sup>,</span>
+              <span class="author-block">
+                <a href="https://leehosu01.github.io" target="_blank">Hosu Lee</a><sup>2*</sup>,</span>
+              <span class="author-block">
+                <a href="https://rehg.org" target="_blank">James M. Rehg</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/ms-dot-k" target="_blank">Minsu Kim</a><sup>3&dagger;</sup>,</span>
+              <span class="author-block">
+                <a href="https://ivylab.kaist.ac.kr" target="_blank">Yong Man Ro</a><sup>2&dagger;</sup></span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup> UIUC &nbsp;&nbsp; <sup>2</sup> KAIST &nbsp;&nbsp; <sup>3</sup> Google DeepMind</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution &nbsp;&nbsp; <sup>&dagger;</sup>Corresponding Author</small></span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/pdf/2506.05765.pdf" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Paper</span>
                 </a>
               </span>
-            </div>
+
+              <span class="link-block">
+                <a href="https://github.com/interlive-team/STRIDE" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="https://huggingface.co/interlive" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fas fa-cube"></i>
+              </span>
+              <span>Models</span>
+            </a>
+          </span>
+
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2506.05765" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser Carousel -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      <div class="teaser-carousel-wrapper">
+        <div class="teaser-slide active" data-index="0">
+          <video autoplay controls muted loop playsinline preload="metadata">
+            <source src="assets/teaser/video1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="teaser-slide" data-index="1">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/teaser/video2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="teaser-slide" data-index="2">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/teaser/video3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="teaser-slide" data-index="3">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/teaser/video4.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="teaser-slide" data-index="4">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/teaser/video5.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="teaser-carousel-nav">
+          <button onclick="changeTeaser(-1)" aria-label="Previous teaser">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="teaser-dots">
+            <button class="dot active" onclick="goToTeaser(0)"></button>
+            <button class="dot" onclick="goToTeaser(1)"></button>
+            <button class="dot" onclick="goToTeaser(2)"></button>
+            <button class="dot" onclick="goToTeaser(3)"></button>
+            <button class="dot" onclick="goToTeaser(4)"></button>
+          </div>
+          <span class="teaser-counter">1 / 5</span>
+          <button onclick="changeTeaser(1)" aria-label="Next teaser">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+        STRIDE produces temporally coherent proactive responses in online streaming settings, determining <em>when</em> and <em>what</em> to respond as the video unfolds.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+
+<!-- Architecture -->
+<section class="section architecture-section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
+      <div class="column">
+        <h2 class="title is-3">Architecture Overview</h2>
+        <p class="section-subtitle">Two-stage streaming framework with masked diffusion-based activation</p>
+        <object data="assets/fig/architecture.pdf" type="application/pdf" width="100%" height="500" style="border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);">
+          <p>Your browser does not support PDFs. <a href="assets/fig/architecture.pdf" target="_blank">Download the architecture figure</a>.</p>
+        </object>
+        <div class="content has-text-justified" style="margin-top: 2rem;">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            STRIDE operates in a streaming setting where frames arrive online. A lightweight <strong>Activation Model</strong> based on masked diffusion maintains an activation region over a sliding temporal window and iteratively denoises masked activation states to predict a coherent trigger segment. A trigger is issued only if an active span is sustained for a predefined span ratio. When activation is triggered, the accumulated frame context is forwarded to a <strong>downstream Video-LLM</strong> to generate the response.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+<!-- Abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent progress in video large language models (Video-LLMs) has enabled strong offline reasoning over long and complex videos. However, real-world deployments increasingly require streaming perception and proactive interaction, where video frames arrive online and the system must decide not only <em>what</em> to respond, but also <em>when</em> to respond. In this work, we revisit proactive activation in streaming video as a structured sequence modeling problem, motivated by the observation that temporal transitions in streaming video naturally form span-structured activation patterns. To capture this span-level structure, we model activation signals jointly over a sliding temporal window and update them iteratively as new frames arrive. We propose <strong>STRIDE</strong> (<strong>S</strong>tructured <strong>T</strong>emporal <strong>R</strong>efinement with <strong>I</strong>terative <strong>DE</strong>noising), which employs a lightweight masked diffusion module at the activation interface to jointly predict and progressively refine activation signals across the window. Extensive experiments on diverse streaming benchmarks and downstream models demonstrate that STRIDE shows more reliable and temporally coherent proactive responses, significantly improving <em>when-to-speak</em> decision quality in online streaming scenarios.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
+<!-- Key Contributions / Method Highlights -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Key Contributions</h2>
+      </div>
+    </div>
+    <div class="method-cards">
+      <div class="method-card">
+        <h4>Span-Level Activation Modeling</h4>
+        <p>We reformulate the <em>when-to-speak</em> problem as structured sequence modeling over a temporal activation window, establishing span-level activation as the prediction unit rather than isolated per-frame binary decisions.</p>
+      </div>
+      <div class="method-card">
+        <h4>Masked Diffusion for Activation</h4>
+        <p>STRIDE employs a lightweight masked diffusion module that jointly predicts activation sequences and captures span-level structure through boundary-aware masking strategies and progressive denoising.</p>
+      </div>
+      <div class="method-card">
+        <h4>Plug-and-Play & Efficient</h4>
+        <p>STRIDE is fully modular and compatible with off-the-shelf Video-LLMs. With only 2B parameters and ~113ms latency, it adds minimal overhead while significantly improving proactive triggering quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Qualitative Results: Video Grid -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <p class="section-subtitle">Streaming proactive responses on OVO-Bench and StreamingBench</p>
+      </div>
+    </div>
+
+    <!-- OVO-Bench -->
+    <div style="margin-bottom: 2.5rem;">
+      <p class="video-section-label">OVO-Bench</p>
+      <div class="video-grid">
+        <div class="video-grid-item">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/videos/ovo1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
+        <div class="video-grid-item">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/videos/ovo2.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
+        <div class="video-grid-item">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/videos/ovo3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-item">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/videos/ovo4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- StreamingBench -->
+    <div>
+      <p class="video-section-label">StreamingBench</p>
+      <div class="video-grid">
+        <div class="video-grid-item">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/videos/sb1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-item">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/videos/sb2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-item">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/videos/sb3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-grid-item">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="assets/videos/sb4.mp4" type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-header">
+      <h2 class="title">BibTeX</h2>
+      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+        <i class="fas fa-copy"></i>
+        <span class="copy-text">Copy</span>
+      </button>
     </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+    <pre id="bibtex-code"><code>@article{kim2025stride,
+  title={STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding},
+  author={Kim, Junho and Lee, Hosu and Rehg, James M. and Kim, Minsu and Ro, Yong Man},
+  journal={arXiv preprint arXiv:2506.05765},
+  year={2025}
 }</code></pre>
-    </div>
+  </div>
 </section>
-<!--End BibTex citation -->
 
 
   <footer class="footer">
@@ -497,24 +604,57 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+</main>
 
-    <!-- End of Statcounter Code -->
+<!-- Teaser carousel script -->
+<script>
+  let currentTeaser = 0;
+  const totalTeasers = 5;
 
-  </body>
-  </html>
+  function changeTeaser(dir) {
+    goToTeaser((currentTeaser + dir + totalTeasers) % totalTeasers);
+  }
+
+  function goToTeaser(index) {
+    // Pause current video
+    const currentSlide = document.querySelector('.teaser-slide.active');
+    if (currentSlide) {
+      const vid = currentSlide.querySelector('video');
+      if (vid) vid.pause();
+      currentSlide.classList.remove('active');
+    }
+
+    currentTeaser = index;
+
+    // Show new slide
+    const slides = document.querySelectorAll('.teaser-slide');
+    slides[currentTeaser].classList.add('active');
+    const newVid = slides[currentTeaser].querySelector('video');
+    if (newVid) {
+      newVid.currentTime = 0;
+      newVid.play().catch(function(){});
+    }
+
+    // Update dots
+    document.querySelectorAll('.teaser-dots .dot').forEach(function(dot, i) {
+      dot.classList.toggle('active', i === currentTeaser);
+    });
+
+    // Update counter
+    const counter = document.querySelector('.teaser-counter');
+    if (counter) counter.textContent = (currentTeaser + 1) + ' / ' + totalTeasers;
+  }
+</script>
+
+</body>
+</html>
