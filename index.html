@@ -148,7 +148,7 @@
     /* Video grid styles */
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
     }
     .video-grid-item video {
@@ -220,7 +220,7 @@
 
     @media screen and (max-width: 768px) {
       .video-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
       .method-cards {
         grid-template-columns: 1fr;
@@ -345,12 +345,12 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2506.05765.pdf" target="_blank"
+                  <a href="#" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Paper (coming soon)</span>
                 </a>
               </span>
 
@@ -375,12 +375,12 @@
           </span>
 
             <span class="link-block">
-              <a href="https://arxiv.org/abs/2506.05765" target="_blank"
+              <a href="#" target="_blank"
               class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
                 <i class="ai ai-arxiv"></i>
               </span>
-              <span>arXiv</span>
+              <span>arXiv (coming soon)</span>
             </a>
           </span>
           </div>
@@ -455,9 +455,9 @@
       <div class="column">
         <h2 class="title is-3">Architecture Overview</h2>
         <p class="section-subtitle">Two-stage streaming framework with masked diffusion-based activation</p>
-        <object data="assets/fig/architecture.pdf" type="application/pdf" width="100%" height="500" style="border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);">
-          <p>Your browser does not support PDFs. <a href="assets/fig/architecture.pdf" target="_blank">Download the architecture figure</a>.</p>
-        </object>
+        <div style="text-align: center;">
+          <iframe src="assets/fig/architecture.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0" width="100%" height="480" style="border: none; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); background: white;"></iframe>
+        </div>
         <div class="content has-text-justified" style="margin-top: 2rem;">
           <p>
             STRIDE operates in a streaming setting where frames arrive online. A lightweight <strong>Activation Model</strong> based on masked diffusion maintains an activation region over a sliding temporal window and iteratively denoises masked activation states to predict a coherent trigger segment. A trigger is issued only if an active span is sustained for a predefined span ratio. When activation is triggered, the accumulated frame context is forwarded to a <strong>downstream Video-LLM</strong> to generate the response.
@@ -512,67 +512,56 @@
 </section>
 
 
-<!-- Qualitative Results: Video Grid -->
+<!-- Qualitative Examples -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h2 class="title is-3">Qualitative Results</h2>
-        <p class="section-subtitle">Streaming proactive responses on OVO-Bench and StreamingBench</p>
+        <h2 class="title is-3">Streaming Examples</h2>
+        <p class="section-subtitle">Proactive response examples from STRIDE on diverse streaming scenarios</p>
       </div>
     </div>
 
-    <!-- OVO-Bench -->
-    <div style="margin-bottom: 2.5rem;">
-      <p class="video-section-label">OVO-Bench</p>
-      <div class="video-grid">
-        <div class="video-grid-item">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="assets/videos/ovo1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-grid-item">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="assets/videos/ovo2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-grid-item">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="assets/videos/ovo3.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-grid-item">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="assets/videos/ovo4.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div class="video-grid">
+      <div class="video-grid-item">
+        <video controls muted loop playsinline preload="metadata">
+          <source src="assets/videos/ovo1.mp4" type="video/mp4">
+        </video>
       </div>
-    </div>
-
-    <!-- StreamingBench -->
-    <div>
-      <p class="video-section-label">StreamingBench</p>
-      <div class="video-grid">
-        <div class="video-grid-item">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="assets/videos/sb1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-grid-item">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="assets/videos/sb2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-grid-item">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="assets/videos/sb3.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video-grid-item">
-          <video controls muted loop playsinline preload="metadata">
-            <source src="assets/videos/sb4.mp4" type="video/mp4">
-          </video>
-        </div>
+      <div class="video-grid-item">
+        <video controls muted loop playsinline preload="metadata">
+          <source src="assets/videos/ovo2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-grid-item">
+        <video controls muted loop playsinline preload="metadata">
+          <source src="assets/videos/ovo3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-grid-item">
+        <video controls muted loop playsinline preload="metadata">
+          <source src="assets/videos/ovo4.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-grid-item">
+        <video controls muted loop playsinline preload="metadata">
+          <source src="assets/videos/sb1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-grid-item">
+        <video controls muted loop playsinline preload="metadata">
+          <source src="assets/videos/sb2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-grid-item">
+        <video controls muted loop playsinline preload="metadata">
+          <source src="assets/videos/sb3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-grid-item">
+        <video controls muted loop playsinline preload="metadata">
+          <source src="assets/videos/sb4.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
@@ -592,7 +581,7 @@
     <pre id="bibtex-code"><code>@article{kim2025stride,
   title={STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding},
   author={Kim, Junho and Lee, Hosu and Rehg, James M. and Kim, Minsu and Ro, Yong Man},
-  journal={arXiv preprint arXiv:2506.05765},
+  journal={arXiv preprint arXiv:???},
   year={2025}
 }</code></pre>
   </div>
