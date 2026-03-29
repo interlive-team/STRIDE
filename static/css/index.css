@@ -50,16 +50,28 @@ body {
 }
 
 .button.is-dark {
-  background: var(--text-primary) !important;
-  border: none !important;
-  color: white !important;
-  box-shadow: var(--shadow-md);
+  background: var(--background-primary) !important;
+  border: 1.5px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--shadow-sm);
 }
 
 .button.is-dark:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
-  background: var(--primary-color) !important;
+  background: var(--background-secondary) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Icon brand colors */
+.button.is-dark .fa-file-pdf {
+  color: #e53e3e;
+}
+.button.is-dark .fa-github {
+  color: #333;
+}
+.button.is-dark .ai-arxiv {
+  color: #b31b1b;
 }
 
 .button.is-dark:active {
