@@ -4,7 +4,7 @@
 
 ### When to Speak Meets Sequence Denoising for Streaming Video Understanding
 
-[\[📜 Paper\]](https://arxiv.org/abs/2603.XXXXX)
+[\[📜 Paper\]](https://arxiv.org/abs/2603.27593)
 [\[🌐 Project Page\]](https://interlive-team.github.io/STRIDE)
 [\[🤗 Models\]](https://huggingface.co/interlive)
 
@@ -32,7 +32,7 @@ Junho Kim<sup>1*</sup>, Hosu Lee<sup>2*</sup>, James M. Rehg<sup>1</sup>, Minsu 
 @article{kim2026stride,
   title={STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding},
   author={Kim, Junho and Lee, Hosu and Rehg, James M. and Kim, Minsu and Ro, Yong Man},
-  journal={arXiv preprint arXiv:2603.XXXXX},
+  journal={arXiv preprint arXiv:2603.27593},
   year={2026}
 }
 ```
