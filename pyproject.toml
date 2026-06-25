@@ -1,0 +1,33 @@
+[project]
+name = "stride"
+version = "0.1.0"
+requires-python = "==3.12.*"
+dependencies = [
+    "torch==2.8.0",
+    "torchvision==0.23.0",
+    "transformers",
+    "numpy==2.3.5",
+    "opencv-python==4.13.0.92",
+    "decord==0.6.0",
+    "pillow==12.0.0",
+    "huggingface-hub==1.4.1",
+    "tqdm==4.67.1",
+    "pyyaml==6.0.3",
+    "deepspeed==0.18.5",
+    "accelerate==1.12.0",
+    "flash-attn==2.8.3",
+    "wandb==0.23.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["stride"]
+
+[tool.uv.sources]
+transformers = { git = "https://github.com/huggingface/transformers", rev = "e2372ffabdf6da99364d3d053da7783acf5f623c" }
+
+[tool.uv.extra-build-dependencies]
+flash-attn = [{ requirement = "torch", match-runtime = true }]

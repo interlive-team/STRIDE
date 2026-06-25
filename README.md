@@ -23,8 +23,40 @@ Junho Kim<sup>1*</sup>, Hosu Lee<sup>2*</sup>, James M. Rehg<sup>1</sup>, Minsu 
 - [x] Paper release
 - [x] Model weights release ([STRIDE-2B](https://huggingface.co/interlive/STRIDE-2B))
 - [x] [Demo website](https://interlive-team.github.io/STRIDE)
-- [ ] Training code
+- [x] Training code
 - [ ] Evaluation scripts
+
+## Training
+
+### 1. Download the videos
+
+Download and extract the source videos from the [`interlive/stream-data`](https://huggingface.co/datasets/interlive/stream-data) dataset into a `video_root` directory:
+
+```bash
+uv run scripts/download_videos.py --output_dir /path/to/video_root
+```
+
+Pass `--max_per_folder N` to extract only `N` videos per folder for a quick sample (default `0` extracts everything).
+
+### 2. Prepare the activation dataset
+
+Convert the source annotations into masked-diffusion activation training data (`.jsonl`):
+
+```bash
+uv run --no-sync scripts/prepare_activation_dataset.py \
+    --video_root /path/to/video_root \
+    --output_path /path/to/data.jsonl
+```
+
+`--video_root` points to a directory organized as `video_root/source/video_id`.
+
+### 3. Train the proactive activation model
+
+```bash
+bash scripts/train.sh /path/to/data.jsonl
+```
+
+The first argument is the path to the activation data produced in the previous step.
 
 ## Citation
 
