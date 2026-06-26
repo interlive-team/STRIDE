@@ -4,6 +4,8 @@
 
 ### When to Speak Meets Sequence Denoising for Streaming Video Understanding
 
+**European Conference on Computer Vision, 2026**
+
 [\[📜 Paper\]](https://arxiv.org/abs/2603.27593)
 [\[🌐 Project Page\]](https://interlive-team.github.io/STRIDE)
 [\[🤗 Models\]](https://huggingface.co/interlive)
@@ -24,7 +26,7 @@ Junho Kim<sup>1*</sup>, Hosu Lee<sup>2*</sup>, James M. Rehg<sup>1</sup>, Minsu 
 - [x] Model weights release ([STRIDE-2B](https://huggingface.co/interlive/STRIDE-2B))
 - [x] [Demo website](https://interlive-team.github.io/STRIDE)
 - [x] Training code
-- [ ] Evaluation scripts
+- [x] Evaluation scripts
 
 ## Training
 
@@ -57,6 +59,19 @@ bash scripts/train.sh /path/to/data.jsonl
 ```
 
 The first argument is the path to the activation data produced in the previous step.
+
+## Evaluation
+
+Run ET-Bench (trigger detection + scoring):
+
+```bash
+ANNO_PATH=/path/to/etbench_txt_v1.0.json DATA_PATH=/path/to/videos \
+    bash scripts/etbench.sh interlive/STRIDE-2B
+```
+
+`ANNO_PATH` is the ET-Bench annotation JSON and `DATA_PATH` is the video root.
+
+For other benchmarks (OVO-Bench, StreamingBench), refer to [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval).
 
 ## Citation
 
